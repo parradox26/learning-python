@@ -1,11 +1,21 @@
-xfile = open('F:\PYTHON\pythoncode\dummy.txt')
+try:
+    fname = input('provide a file name: ')
+    if len(fname) < 1 :
+        print("name can not be empty..!")
+    else:
+        xfile = open(fname)
+except FileNotFoundError:
+    print(f'File not found : {fname}')
+    exit()
+keyword = input('Enter the keyword you want to search: ')
 count = 0
 c = 0
-for line in xfile:    #reading a file per line 
+for line in xfile:     #reading a file per line 
+    line = line.rstrip()    #removes whitespaces from right hand side
     for word in line.split():
-        if word in 'one':
+        if word in keyword:
             c+=1
-        print(word)
     count+=1
-    print(f'{count}: {line}  {c}')
+    print(f'{keyword} is occured {c} times in total of {count} line(s)')
+xfile.close()
     
