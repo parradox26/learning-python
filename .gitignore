@@ -1,3 +1,8 @@
 even-odd.txt
 *.pub
 mykeys
+.bashrc.swp
+.bashrc
+.vscode/
+"\357\200\233[A\357\200\233[A\357\200\233[A\357\200\233[B\357\200\233[B\357\200\233[Bmykeys"
+bstoperations.py

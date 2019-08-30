@@ -1,6 +1,6 @@
 from collections import Counter
 input_string = input("Enter a list element separated by comma ")
-list  = input_string.replace(" "," ").split(",")
+list  = input_string.replace(" ","").split(",")
 fre = Counter(list)
 for i in fre.keys():
     print('{} - {}'.format(i,fre[i])) 
